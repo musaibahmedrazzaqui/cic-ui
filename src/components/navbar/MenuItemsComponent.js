@@ -45,7 +45,7 @@ const MenuItems = ({ items, depthLevel }) => {
             aria-expanded={dropdown ? "true" : "false"}
             onClick={() => setDropdown((prev) => !prev)}
           >
-            <NavLinks to={`/signin`}>
+            <NavLinks to={`/`}>
               {items.title}{" "}
               {depthLevel > 0 ? <span></span> : <span className="arrow" />}
             </NavLinks>
