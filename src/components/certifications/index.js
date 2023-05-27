@@ -264,7 +264,7 @@ export const ISO450012018 = () => {
         is learned in the classroom to real-world situations.
       </h6>
       <br />
-      <h5 style={{ fontWeight: "bold" }}>What is ISO 27001:2022?</h5>
+      <h5 style={{ fontWeight: "bold" }}>What is ISO 45001:2018?</h5>
       <h6>
         ISO 45001:2018 is an international standard that outlines requirements
         for an occupational health and safety management system (OHSMS). The
