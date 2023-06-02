@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaAngleDown } from "react-icons/fa";
 import { menuItems } from "./menuItems";
+import { signupprompts } from "./signupprompts";
 import MenuItems from "./MenuItemsComponent";
 
 import {
@@ -36,7 +37,7 @@ export const Navbar = ({ toggle }) => {
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLogo to="/">
-            <h1 className="logo-text">syntec</h1>
+            <h1 className="logo-text">IGCA</h1>
           </NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
@@ -57,9 +58,12 @@ export const Navbar = ({ toggle }) => {
             <NavItem>
               <NavLinks to="services">Services</NavLinks>
             </NavItem>
-            <NavItem>
-              <NavLinks to="signup">Sign Up</NavLinks>
-            </NavItem>
+            {signupprompts.map((menu, index) => {
+              const depthLevel = 0;
+              return (
+                <MenuItems items={menu} key={index} depthLevel={depthLevel} />
+              );
+            })}
           </NavMenu>
           <NavBtn>
             <NavBtnLink to="/signin">Sign In</NavBtnLink>
@@ -88,7 +92,7 @@ export const NavbarTwo = ({ toggle }) => {
       <NavTwo scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLogo to="/">
-            <h1 className="logo-text">syntec</h1>
+            <h1 className="logo-text">IGCA</h1>
           </NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
@@ -109,9 +113,12 @@ export const NavbarTwo = ({ toggle }) => {
             <NavItem>
               <NavLinks to="services">Services</NavLinks>
             </NavItem>
-            <NavItem>
-              <NavLinks to="signup">Sign Up</NavLinks>
-            </NavItem>
+            {signupprompts.map((menu, index) => {
+              const depthLevel = 0;
+              return (
+                <MenuItems items={menu} key={index} depthLevel={depthLevel} />
+              );
+            })}
           </NavMenu>
           <NavBtn>
             <NavBtnLink to="/signin">Sign In</NavBtnLink>

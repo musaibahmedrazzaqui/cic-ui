@@ -58,7 +58,7 @@ const MenuItems2 = ({ items, depthLevel }) => {
           /> */}
         </>
       ) : (
-        <NavLinks to={`/certifications/${items.uri}`}>{items.title}</NavLinks>
+        <NavLinks to={`/${items.parent}/${items.uri}`}>{items.title}</NavLinks>
       )}
     </li>
   );

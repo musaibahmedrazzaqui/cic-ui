@@ -2,6 +2,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Home } from "./pages";
+import SignupPage from "./pages/Signup";
 import SigninPage from "./pages/signin";
 import {
   CertificationsPage1,
@@ -21,6 +22,8 @@ function App() {
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/signin" component={SigninPage} exact />
+
+        <Route path="/signup/student" component={SignupPage} exact />
 
         <Route
           path="/certifications/iso90012015"
